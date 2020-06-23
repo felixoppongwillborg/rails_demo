@@ -1,5 +1,4 @@
 require_relative 'boot'
-
 require "rails"
 require "active_model/railtie"
 require "active_job/railtie"
@@ -14,11 +13,8 @@ require "action_cable/engine"
 require "sprockets/railtie"
 
 Bundler.require(*Rails.groups)
-
 module RailsDemo
   class Application < Rails::Application
-
-    # Disable generation of helpers, javascripts, CSS, and view, helper, routing and controller specs
   
     config.generators do |generate|
       generate.helper false
@@ -29,3 +25,4 @@ module RailsDemo
       generate.controller_specs false
     end
   end
+end
