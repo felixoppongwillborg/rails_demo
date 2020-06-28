@@ -7,4 +7,15 @@
   <% end %>
 </ul>
 
-<%= link_to 'New Article', new_article_path %>
+
+    <%= link_to 'Log in/Sign up', new_user_session_path %><br />
+
+    <%# <% if user_signed_in? %>
+    <%# <%= link_to 'Log out', destroy_user_session_path, :method => :delete %> 
+    <%# <%end%> 
+
+    <% if user_signed_in? %>
+  
+    <%= link_to 'Log out', destroy_user_session_path, :method => :delete %><br />
+    <%= link_to 'New Article', new_article_path %><br />
+    <%end%>
